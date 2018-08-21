@@ -26,31 +26,34 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignIn(_ sender: Any) {
-        let username = usernameTextField.text ?? ""
-        let passwordEntered = passwordTextField.text ?? ""
+        let username = usernameTextField.text! as String
+        let passwordEntered = passwordTextField.text! as String
         
         PFUser.logInWithUsername(inBackground: username, password: passwordEntered) {
             (user: PFUser?, error: Error?) -> Void in
+            print(user)
+            print(username, passwordEntered)
             if user != nil {
                 print("logged in successfully")
             } else {
-                print(error?.localizedDescription)
+                print(error!.localizedDescription)
             }
         }
 
     }
     
     @IBAction func onSignUp(_ sender: Any) {
+        
         let newUser = PFUser()
-        newUser.username = usernameTextField.text
-        newUser.password = usernameTextField.text
+        newUser.username = usernameTextField.text! as String
+        newUser.password = passwordTextField.text! as String
         
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if success{
                 print("registered successfully")
             }
             else {
-                print(error?.localizedDescription)
+                print(error!.localizedDescription)
             }
         }
     }
