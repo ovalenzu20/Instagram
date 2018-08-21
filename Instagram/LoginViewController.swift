@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +26,18 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignIn(_ sender: Any) {
+        let username = usernameTextField.text ?? ""
+        let passwordEntered = passwordTextField.text ?? ""
+        
+        PFUser.logInWithUsername(inBackground: username, password: passwordEntered) {
+            (user: PFUser?, error: Error?) -> Void in
+            if user != nil {
+                print("logged in successfully")
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+
     }
     
     @IBAction func onSignUp(_ sender: Any) {
@@ -33,10 +46,11 @@ class LoginViewController: UIViewController {
         newUser.password = usernameTextField.text
         
         newUser.signUpInBackground { (success: Bool, error: Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                print("User Registered successfully")
+            if success{
+                print("registered successfully")
+            }
+            else {
+                print(error?.localizedDescription)
             }
         }
     }
