@@ -155,8 +155,8 @@
 		787315B9212A7222003D5529 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				78628B8F212CD6750018D7EF /* View Controllers */,
 				78628B8D212CD6680018D7EF /* Models */,
+				78628B8F212CD6750018D7EF /* View Controllers */,
 				787315BA212A7222003D5529 /* AppDelegate.swift */,
 				787315BE212A7222003D5529 /* Main.storyboard */,
 				787315C1212A7222003D5529 /* Assets.xcassets */,

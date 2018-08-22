@@ -17,19 +17,37 @@ class Post: PFObject, PFSubclassing {
     //    @NSManaged var createdAt: Date?
     //    @NSManaged var updatedAt: Date?
     
-    @NSManaged var author : String?
-    @NSManaged var image : UIImage
+    @NSManaged var author : PFUser
+    @NSManaged var media : PFFile
     @NSManaged var caption : String
-    @NSManaged var commmentsCount : Int
+    @NSManaged var commentsCount : Int
     @NSManaged var likesCount : Int
 
-    
-    
-    
-    
-    // returns the Parse name that should be used
     class func parseClassName() -> String {
         return "Post"
+    }
+    
+    class func postUserImage(image: UIImage?, withCaption caption: String?, withCompletion completion: PFBooleanResultBlock?) {
+        let post = Post()
+        
+        post.media = getPFFileFromImage(image: image)!
+        post.author = PFUser.current()! // Pointer column type that points to PFUser
+        post.caption = caption!
+        post.likesCount = 0
+        post.commentsCount = 0
+        
+        post.saveInBackground(block: completion)
+    }
+    
+    
+    // Method to convert UIImage to PFFile
+    class func getPFFileFromImage(image: UIImage?) -> PFFile? {
+        if let image = image {
+            if let imageData = UIImagePNGRepresentation(image) {
+                return PFFile(name: "image.png", data: imageData)
+            }
+        }
+        return nil
     }
 }
 
