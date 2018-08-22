@@ -13,6 +13,8 @@
 		78628B97212CE06C0018D7EF /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78628B96212CE06C0018D7EF /* CaptureViewController.swift */; };
 		78628B99212CE0740018D7EF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78628B98212CE0740018D7EF /* ProfileViewController.swift */; };
 		78628B9B212CE0A20018D7EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78628B9A212CE0A20018D7EF /* HomeViewController.swift */; };
+		78628B9F212CE2AC0018D7EF /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78628B9E212CE2AB0018D7EF /* Billabong.ttf */; };
+		78628BA2212CE2D00018D7EF /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78628BA1212CE2B70018D7EF /* Billabong.ttf */; };
 		787315BB212A7222003D5529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787315BA212A7222003D5529 /* AppDelegate.swift */; };
 		787315C0212A7222003D5529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787315BE212A7222003D5529 /* Main.storyboard */; };
 		787315C2212A7222003D5529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787315C1212A7222003D5529 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		78628B96212CE06C0018D7EF /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		78628B98212CE0740018D7EF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		78628B9A212CE0A20018D7EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		78628B9E212CE2AB0018D7EF /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Billabong.ttf; path = ../../../Downloads/Billabong.ttf; sourceTree = "<group>"; };
+		78628BA1212CE2B70018D7EF /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 		787315B7212A7222003D5529 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		787315BA212A7222003D5529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		787315BF212A7222003D5529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,10 +95,19 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		78628BA0212CE2B70018D7EF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				78628BA1212CE2B70018D7EF /* Billabong.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		787315AE212A7222003D5529 = {
 			isa = PBXGroup;
 			children = (
 				787315B9212A7222003D5529 /* Instagram */,
+				78628BA0212CE2B70018D7EF /* Fonts */,
 				787315B8212A7222003D5529 /* Products */,
 				391611104E8F513C50B6F297 /* Pods */,
 				18D62ADF65525AEB5CC93036 /* Frameworks */,
@@ -112,6 +125,7 @@
 		787315B9212A7222003D5529 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				78628B9E212CE2AB0018D7EF /* Billabong.ttf */,
 				78628B8F212CD6750018D7EF /* View Controllers */,
 				78628B8E212CD6700018D7EF /* Views */,
 				78628B8D212CD6680018D7EF /* Models */,
@@ -187,6 +201,8 @@
 				787315C5212A7222003D5529 /* LaunchScreen.storyboard in Resources */,
 				787315C2212A7222003D5529 /* Assets.xcassets in Resources */,
 				787315C0212A7222003D5529 /* Main.storyboard in Resources */,
+				78628BA2212CE2D00018D7EF /* Billabong.ttf in Resources */,
+				78628B9F212CE2AC0018D7EF /* Billabong.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
