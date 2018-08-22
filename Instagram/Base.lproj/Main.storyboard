@@ -55,11 +55,91 @@
                     <connections>
                         <outlet property="passwordTextField" destination="KzK-jt-kNF" id="TZz-dJ-kHD"/>
                         <outlet property="usernameTextField" destination="Svu-5M-xfu" id="MS6-l2-pjH"/>
+                        <segue destination="8nk-c3-Gyh" kind="presentation" identifier="LoginSucessfulSegue" id="waS-SN-Lnp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
+        <!--Feed-->
+        <scene sceneID="6I4-2u-bti">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="tof-Ul-Jzq" customClass="HomeViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FqO-Y0-Fhb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JLH-IB-mdf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="feed_tab" selectedImage="feed_tab" id="DUc-M8-QOh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T68-mK-5VY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="904"/>
+        </scene>
+        <!--Capture-->
+        <scene sceneID="5M2-OR-PCF">
+            <objects>
+                <viewController id="EQe-D9-VGn" customClass="CaptureViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XgY-AZ-INm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rEm-8Y-Bb1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Capture" image="insta_camera_btn" selectedImage="insta_camera_btn" id="Qf0-m2-6tA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AzM-bT-7gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="908"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="A4c-jS-Yq3">
+            <objects>
+                <viewController id="bLh-T2-itc" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JRT-0v-xX3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-hq-mzM">
+                                <rect key="frame" x="71" y="553" width="232" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SwY-cE-wUL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_tab" selectedImage="profile_tab" id="InN-o1-3Be"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEY-cn-mcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640.8" y="903.59820089955031"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dFO-1K-zzJ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8nk-c3-Gyh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zMg-4Y-NA5">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tof-Ul-Jzq" kind="relationship" relationship="viewControllers" id="buv-9B-8p6"/>
+                        <segue destination="EQe-D9-VGn" kind="relationship" relationship="viewControllers" id="YdG-FO-ANx"/>
+                        <segue destination="bLh-T2-itc" kind="relationship" relationship="viewControllers" id="Dv5-Gr-2JK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Y6-DD-sI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="132.68365817091455"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="feed_tab" width="25" height="25"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
+        <image name="profile_tab" width="25" height="25"/>
+    </resources>
 </document>
