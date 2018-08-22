@@ -13,7 +13,6 @@
 		78628B97212CE06C0018D7EF /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78628B96212CE06C0018D7EF /* CaptureViewController.swift */; };
 		78628B99212CE0740018D7EF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78628B98212CE0740018D7EF /* ProfileViewController.swift */; };
 		78628B9B212CE0A20018D7EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78628B9A212CE0A20018D7EF /* HomeViewController.swift */; };
-		78628B9F212CE2AC0018D7EF /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78628B9E212CE2AB0018D7EF /* Billabong.ttf */; };
 		78628BA2212CE2D00018D7EF /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78628BA1212CE2B70018D7EF /* Billabong.ttf */; };
 		78628BAE212CE3710018D7EF /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78628BA3212CE36E0018D7EF /* Roboto-Regular.ttf */; };
 		78628BAF212CE3710018D7EF /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78628BA4212CE36E0018D7EF /* Roboto-Light.ttf */; };
@@ -41,7 +40,6 @@
 		78628B96212CE06C0018D7EF /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		78628B98212CE0740018D7EF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		78628B9A212CE0A20018D7EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		78628B9E212CE2AB0018D7EF /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Billabong.ttf; path = ../../../Downloads/Billabong.ttf; sourceTree = "<group>"; };
 		78628BA1212CE2B70018D7EF /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 		78628BA3212CE36E0018D7EF /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../Downloads/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		78628BA4212CE36E0018D7EF /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../Downloads/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -103,13 +101,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		78628B8E212CD6700018D7EF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		78628B8F212CD6750018D7EF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,9 +155,7 @@
 		787315B9212A7222003D5529 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				78628B9E212CE2AB0018D7EF /* Billabong.ttf */,
 				78628B8F212CD6750018D7EF /* View Controllers */,
-				78628B8E212CD6700018D7EF /* Views */,
 				78628B8D212CD6680018D7EF /* Models */,
 				787315BA212A7222003D5529 /* AppDelegate.swift */,
 				787315BE212A7222003D5529 /* Main.storyboard */,
@@ -252,7 +241,6 @@
 				78628BB3212CE3710018D7EF /* Roboto-Italic.ttf in Resources */,
 				78628BB5212CE3710018D7EF /* Roboto-Thin.ttf in Resources */,
 				78628BB8212CE3710018D7EF /* Roboto-Bold.ttf in Resources */,
-				78628B9F212CE2AC0018D7EF /* Billabong.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
