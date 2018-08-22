@@ -41,21 +41,7 @@ class LoginViewController: UIViewController {
 
     }
     
-    @IBAction func onSignUp(_ sender: Any) {
-        
-        let newUser = PFUser()
-        newUser.username = usernameTextField.text! as String
-        newUser.password = passwordTextField.text! as String
-        
-        newUser.signUpInBackground { (success: Bool, error: Error?) in
-            if success{
-                print("registered successfully")
-            }
-            else {
-                print(error!.localizedDescription)
-            }
-        }
-    }
+   
     
 
 }
