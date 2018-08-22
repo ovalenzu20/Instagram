@@ -27,6 +27,7 @@
 		78628BB8212CE3710018D7EF /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78628BAD212CE3700018D7EF /* Roboto-Bold.ttf */; };
 		78628BBA212CE4F40018D7EF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78628BB9212CE4F40018D7EF /* RegisterViewController.swift */; };
 		78628BBC212CE7090018D7EF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78628BBB212CE7090018D7EF /* CustomButton.swift */; };
+		78628BBF212E04DD0018D7EF /* PhotoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78628BBE212E04DD0018D7EF /* PhotoMapViewController.swift */; };
 		787315BB212A7222003D5529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787315BA212A7222003D5529 /* AppDelegate.swift */; };
 		787315C0212A7222003D5529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787315BE212A7222003D5529 /* Main.storyboard */; };
 		787315C2212A7222003D5529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787315C1212A7222003D5529 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		78628BAD212CE3700018D7EF /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../Downloads/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		78628BB9212CE4F40018D7EF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		78628BBB212CE7090018D7EF /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		78628BBE212E04DD0018D7EF /* PhotoMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMapViewController.swift; sourceTree = "<group>"; };
 		787315B7212A7222003D5529 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		787315BA212A7222003D5529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		787315BF212A7222003D5529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,11 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				78177C89212B55A6004FA3A3 /* LoginViewController.swift */,
-				78628BBB212CE7090018D7EF /* CustomButton.swift */,
 				78628B96212CE06C0018D7EF /* CaptureViewController.swift */,
 				78628B98212CE0740018D7EF /* ProfileViewController.swift */,
 				78628B9A212CE0A20018D7EF /* HomeViewController.swift */,
 				78628BB9212CE4F40018D7EF /* RegisterViewController.swift */,
+				78628BBE212E04DD0018D7EF /* PhotoMapViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -131,6 +133,33 @@
 				78628BA1212CE2B70018D7EF /* Billabong.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		78628BC0212E04E50018D7EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				78628BBB212CE7090018D7EF /* CustomButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		78628BC1212E04F40018D7EF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				787315BE212A7222003D5529 /* Main.storyboard */,
+				787315C3212A7222003D5529 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		78628BC2212E04FB0018D7EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				787315BA212A7222003D5529 /* AppDelegate.swift */,
+				787315C1212A7222003D5529 /* Assets.xcassets */,
+				787315C6212A7222003D5529 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		787315AE212A7222003D5529 = {
@@ -155,13 +184,11 @@
 		787315B9212A7222003D5529 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				78628BC2212E04FB0018D7EF /* Resources */,
+				78628BC1212E04F40018D7EF /* Storyboards */,
+				78628BC0212E04E50018D7EF /* Views */,
 				78628B8D212CD6680018D7EF /* Models */,
 				78628B8F212CD6750018D7EF /* View Controllers */,
-				787315BA212A7222003D5529 /* AppDelegate.swift */,
-				787315BE212A7222003D5529 /* Main.storyboard */,
-				787315C1212A7222003D5529 /* Assets.xcassets */,
-				787315C3212A7222003D5529 /* LaunchScreen.storyboard */,
-				787315C6212A7222003D5529 /* Info.plist */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -292,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78628BBF212E04DD0018D7EF /* PhotoMapViewController.swift in Sources */,
 				78628B99212CE0740018D7EF /* ProfileViewController.swift in Sources */,
 				78628B91212CD6930018D7EF /* Post.swift in Sources */,
 				78628BBA212CE4F40018D7EF /* RegisterViewController.swift in Sources */,
