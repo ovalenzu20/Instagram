@@ -36,6 +36,14 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "LoginSucessfulSegue", sender: nil)
             } else {
                 print(error!.localizedDescription)
+                let errorMessage = error?.localizedDescription
+                
+                let alertController = UIAlertController(title: "Error Signing Up. Try again", message: errorMessage, preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in })
+                
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true)
             }
         }
 

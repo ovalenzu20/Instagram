@@ -14,6 +14,7 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +33,23 @@ class RegisterViewController: UIViewController {
         let newUser = PFUser()
         newUser.username = usernameTextField.text! as String
         newUser.password = passwordTextField.text! as String
+        newUser.email = emailTextField.text! as String
         
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if success{
                 print("registered successfully")
+                 self.performSegue(withIdentifier: "RegisterSucessfulSegue", sender: nil)
             }
             else {
                 print(error!.localizedDescription)
+                let errorMessage = error?.localizedDescription
+
+                let alertController = UIAlertController(title: "Error Signing Up. Try again", message: errorMessage, preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in })
+                
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true)
             }
         }
     }
