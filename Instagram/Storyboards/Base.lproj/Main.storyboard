@@ -295,10 +295,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="6G1-VC-T7d">
-                                                    <rect key="frame" x="0.0" y="69" width="375" height="348"/>
+                                                    <rect key="frame" x="0.0" y="69" width="375" height="350"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="375" id="0jY-Ok-UVU"/>
-                                                        <constraint firstAttribute="height" constant="348" id="rYt-OP-OD5"/>
+                                                        <constraint firstAttribute="height" constant="350" id="rYt-OP-OD5"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iwY-pn-hhN">
@@ -340,7 +340,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="6G1-VC-T7d" secondAttribute="trailing" id="OT9-tJ-wpb"/>
                                                 <constraint firstItem="K7t-7a-KIs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0jd-UZ-EB4" secondAttribute="trailing" constant="8" id="TCt-XB-Cvw"/>
                                                 <constraint firstItem="iwY-pn-hhN" firstAttribute="leading" secondItem="ebp-EH-K7x" secondAttribute="leading" constant="8" id="aDy-nG-qXc"/>
-                                                <constraint firstItem="iwY-pn-hhN" firstAttribute="top" secondItem="6G1-VC-T7d" secondAttribute="bottom" constant="8" id="bvc-ZM-kmb"/>
+                                                <constraint firstItem="iwY-pn-hhN" firstAttribute="top" secondItem="6G1-VC-T7d" secondAttribute="bottom" constant="6" id="bvc-ZM-kmb"/>
                                                 <constraint firstItem="0jd-UZ-EB4" firstAttribute="top" secondItem="ebp-EH-K7x" secondAttribute="topMargin" constant="12" id="cGA-Qy-qAE"/>
                                                 <constraint firstItem="lje-nd-59z" firstAttribute="top" secondItem="ebp-EH-K7x" secondAttribute="top" constant="8" id="cc4-85-gQd"/>
                                                 <constraint firstAttribute="trailing" secondItem="K7t-7a-KIs" secondAttribute="trailing" constant="8" id="qRT-G9-cTP"/>
@@ -402,39 +402,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HzW-C4-C6x">
-                                <rect key="frame" x="38" y="41" width="300" height="300"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="HzW-C4-C6x">
+                                <rect key="frame" x="0.0" y="93" width="375" height="350"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nC3-9V-xZJ" customClass="CustomButton" customModule="Instagram" customModuleProvider="target">
-                                <rect key="frame" x="168" y="578" width="41" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nC3-9V-xZJ">
+                                <rect key="frame" x="164" y="579" width="53" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="30"/>
-                                <state key="normal" title="Post">
+                                <state key="normal" title="Share">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onPost:" destination="5QB-hW-HGO" eventType="touchUpInside" id="UX0-FR-zpc"/>
+                                    <action selector="onShare:" destination="5QB-hW-HGO" eventType="touchUpInside" id="Jrv-wR-oXO"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="caption" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPs-0Z-cIL">
-                                <rect key="frame" x="50" y="363" width="275" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPs-0Z-cIL">
+                                <rect key="frame" x="17" y="451" width="343" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qB2-ja-Wfv">
+                                <rect key="frame" x="17" y="41" width="47" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="25"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onCancel:" destination="5QB-hW-HGO" eventType="touchUpInside" id="1vv-LP-KRp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIp-px-7Yi">
+                                <rect key="frame" x="175" y="41" width="184" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="25"/>
+                                <state key="normal" title="Upload Different Picture">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onUploadDifferentPicture:" destination="5QB-hW-HGO" eventType="touchUpInside" id="vqe-mX-NP7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SaD-D8-NOM"/>
@@ -442,11 +486,12 @@
                     <connections>
                         <outlet property="caption" destination="jPs-0Z-cIL" id="cdW-eA-vZH"/>
                         <outlet property="postImageView" destination="HzW-C4-C6x" id="V8B-B6-Kki"/>
+                        <segue destination="8nk-c3-Gyh" kind="presentation" identifier="cancelSegue" id="1D4-cH-HdC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="unk-96-OZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-335" y="3171"/>
+            <point key="canvasLocation" x="-354.39999999999998" y="3169.5652173913045"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="A4c-jS-Yq3">
@@ -466,7 +511,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SwY-cE-wUL"/>
                     </view>
                     <navigationItem key="navigationItem" id="GJR-69-n4z"/>
@@ -564,7 +609,7 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d3B-XV-CNm"/>
+        <segue reference="1D4-cH-HdC"/>
         <segue reference="JvN-zx-RSq"/>
         <segue reference="PpD-b6-tHR"/>
     </inferredMetricsTieBreakers>

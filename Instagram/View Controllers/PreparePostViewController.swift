@@ -8,24 +8,68 @@
 
 import UIKit
 
-class PreparePostViewController: UIViewController {
+class PreparePostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
 
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var caption: UITextField!
-    
     var postImage : UIImage?
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        caption.borderStyle = UITextBorderStyle.roundedRect
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("POST IMAGE", postImage)
+        
         postImageView.image = postImage
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-    @IBAction func onPost(_ sender: Any) {
+    @IBAction func onShare(_ sender: Any) {
+        
+    }
+    
+    @IBAction func onUploadDifferentPicture(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.delegate = self
+        vc.allowsEditing = true
+        vc.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        self.present(vc, animated: true, completion: nil)
+        
+        
+    }
+    
+    @IBAction func onCancel(_ sender: Any) {
+        self.performSegue(withIdentifier: "cancelSegue", sender: nil)
+
+    }
+    
+    @objc func imagePickerController(_ picker: UIImagePickerController,
+                                     didFinishPickingMediaWithInfo info: [String : Any]) {
+        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        
+        if editedImage != originalImage{
+            self.postImage = editedImage
+            postImageView.image = postImage
+        } else{
+            self.postImage = originalImage
+            postImageView.image = postImage
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
     

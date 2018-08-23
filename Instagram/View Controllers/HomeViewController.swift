@@ -19,7 +19,6 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.rowHeight = 555
         tableView.estimatedRowHeight = 555
         // Do any additional setup after loading the view.
     }
@@ -45,14 +44,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         instagramTitle.font = UIFont(name: "Billabong", size: 30)
         self.navigationItem.titleView = instagramTitle
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }
