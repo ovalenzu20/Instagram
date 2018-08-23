@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Toucan
+import Parse
+import ParseUI
 
 class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -46,7 +49,8 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // Do something with the images (based on your use case)
         if editedImage != originalImage{
-            self.selectedImage = editedImage
+            let resizedImage = Toucan.Resize.resizeImage(editedImage, size: CGSize(width: 414, height: 414))
+            self.selectedImage = resizedImage
         } else{
             self.selectedImage = originalImage
         }
