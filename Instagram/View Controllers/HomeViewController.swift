@@ -12,7 +12,9 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        setupViews()
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +23,13 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func setupViews(){
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        var instagramTitle = UILabel()
+        instagramTitle.text = "Instagram"
+        instagramTitle.font = UIFont(name: "Billabong", size: 30)
+        self.navigationItem.titleView = instagramTitle
+    }
     /*
     // MARK: - Navigation
 

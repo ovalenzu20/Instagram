@@ -15,11 +15,19 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        setupViews()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func setupViews(){
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        var instagramTitle = UILabel()
+        instagramTitle.text = "Instagram"
+        instagramTitle.font = UIFont(name: "Billabong", size: 30)
+        self.navigationItem.titleView = instagramTitle
     }
     
     func imagePickerController(_ picker: UIImagePickerController,
