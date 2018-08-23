@@ -49,10 +49,13 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // Do something with the images (based on your use case)
         if editedImage != originalImage{
-            let resizedImage = Toucan.Resize.resizeImage(editedImage, size: CGSize(width: 414, height: 414))
+            let resizedImage = Toucan.Resize.resizeImage(editedImage, size: CGSize(width: 375, height: 350))
             self.selectedImage = resizedImage
         } else{
-            self.selectedImage = originalImage
+            let resizedImage = Toucan.Resize.resizeImage(originalImage, size: CGSize(width: 375, height: 350))
+
+            self.selectedImage = resizedImage
+            
         }
         
         DispatchQueue.main.async(){

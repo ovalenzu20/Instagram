@@ -26,6 +26,7 @@ class PreparePostViewController: UIViewController, UIImagePickerControllerDelega
         super.viewDidLoad()
         
         postImageView.image = postImage
+        postImageView.contentMode = .scaleAspectFill
     }
 
     override func didReceiveMemoryWarning() {
