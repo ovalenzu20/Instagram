@@ -7,18 +7,18 @@
 //
 
 import UIKit
+import Parse
 
 class HomeViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
     var posts : [Post] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,12 +27,27 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+        let post    = posts[indexPath.row]
+        let caption = post.caption
+        cell.captionLabel.text = caption
         
+        if let imageFile : PFFile = post.media {
+            imageFile.getDataInBackground(block: {(data, error) in
+                if error == nil {
+                    DispatchQueue.main.async {
+                        let image = UIImage(data: data!)
+                        cell.postImageView.image = image
+                    }
+                } else{
+                    print(error!.localizedDescription)
+                }
+            })
+        }
         return cell
     }
     
@@ -48,7 +63,18 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 555
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
+        
+        tableView.insertSubview(refreshControl, at: 0)
+        self.tableView.reloadData()
+        fetchPosts()
+    }
+    
+    @objc func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        fetchPosts()
         tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     func fetchPosts() {

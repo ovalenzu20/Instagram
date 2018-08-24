@@ -67,15 +67,16 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "HomeSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let preparePostViewController = segue.destination as! PreparePostViewController
         
-//        let size = CGSize(width: 300, height: 300)
-//        self.selectedImage = Post.resiz
+        if segue.identifier != "HomeSegue"{
+            let preparePostViewController = segue.destination as! PreparePostViewController
+            preparePostViewController.postImage = selectedImage
+        }
         
-        preparePostViewController.postImage = selectedImage
         
     }
 }

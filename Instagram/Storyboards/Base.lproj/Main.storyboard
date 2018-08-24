@@ -388,6 +388,7 @@
                     <navigationItem key="navigationItem" id="Vys-2J-1o4"/>
                     <connections>
                         <segue destination="5QB-hW-HGO" kind="presentation" identifier="transitionToPreparePost" id="2sQ-DJ-04q"/>
+                        <segue destination="8nk-c3-Gyh" kind="presentation" identifier="HomeSegue" id="iSF-Fo-Awt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AzM-bT-7gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -609,7 +610,7 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1D4-cH-HdC"/>
+        <segue reference="iSF-Fo-Awt"/>
         <segue reference="JvN-zx-RSq"/>
         <segue reference="PpD-b6-tHR"/>
     </inferredMetricsTieBreakers>
