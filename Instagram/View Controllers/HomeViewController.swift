@@ -33,8 +33,10 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
         let post    = posts[indexPath.row]
-        let caption = post.caption
-        cell.captionLabel.text = caption
+        cell.captionLabel.text = post.caption
+        cell.upperUsernameLabel.text = post.author.username
+        cell.lowerUsernameLabel.text = post.author.username
+        
         
         if let imageFile : PFFile = post.media {
             imageFile.getDataInBackground(block: {(data, error) in
