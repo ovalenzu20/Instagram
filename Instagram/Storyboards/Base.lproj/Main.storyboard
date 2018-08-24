@@ -486,7 +486,7 @@
                     <connections>
                         <outlet property="caption" destination="jPs-0Z-cIL" id="cdW-eA-vZH"/>
                         <outlet property="postImageView" destination="HzW-C4-C6x" id="V8B-B6-Kki"/>
-                        <segue destination="8nk-c3-Gyh" kind="presentation" identifier="cancelSegue" id="1D4-cH-HdC"/>
+                        <segue destination="8nk-c3-Gyh" kind="presentation" identifier="backToHomeSegue" id="1D4-cH-HdC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="unk-96-OZf" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -35,7 +35,25 @@ class PreparePostViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func onShare(_ sender: Any) {
-        
+        Post.postUserImage(image: postImage, withCaption: caption.text){ (success, error) in
+            if success {
+                print("post successful")
+                self.performSegue(withIdentifier: "backToHomeSegue", sender: nil)
+                
+            }
+            else if let error = error as NSError? {
+                let errorString = error.localizedDescription
+                let alertController = UIAlertController(title: "Can't share post", message: errorString, preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: .cancel, handler: {
+                    (action) in
+                })
+                
+                alertController.addAction(okAction)
+                
+                self.present(alertController, animated: true)
+            }
+        }
     }
     
     @IBAction func onUploadDifferentPicture(_ sender: Any) {
@@ -49,7 +67,7 @@ class PreparePostViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func onCancel(_ sender: Any) {
-        self.performSegue(withIdentifier: "cancelSegue", sender: nil)
+        self.performSegue(withIdentifier: "backToHomeSegue", sender: nil)
 
     }
     
@@ -71,6 +89,12 @@ class PreparePostViewController: UIViewController, UIImagePickerControllerDelega
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        homeVC.tableView.reloadData()
+        
     }
     
     
