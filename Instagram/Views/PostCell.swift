@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class PostCell: UITableViewCell {
 
-    @IBOutlet weak var profilePictureImageView: UIImageView!
-    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var profilePictureImageView: PFImageView!
+    @IBOutlet weak var postImageView: PFImageView!
     @IBOutlet weak var numberOfLikesLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
@@ -21,8 +23,12 @@ class PostCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        profilePictureImageView.layer.cornerRadius = profilePictureImageView.layer.frame.height / 2
         
+        profilePictureImageView.layer.borderWidth = 1.0
+        profilePictureImageView.layer.masksToBounds = false
+        profilePictureImageView.layer.borderColor = UIColor.white.cgColor
+        profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.size.height/2
+        profilePictureImageView.clipsToBounds = true
         
     }
 
