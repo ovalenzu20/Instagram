@@ -513,11 +513,145 @@
                     <view key="view" contentMode="scaleToFill" id="JRT-0v-xX3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="gbL-Da-koc" customClass="PFImageView">
+                                <rect key="frame" x="10" y="74" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Hcd-E6-NbG"/>
+                                    <constraint firstAttribute="width" constant="80" id="vea-wv-kDD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pv9-J5-ii5" customClass="CustomButton" customModule="Instagram" customModuleProvider="target">
+                                <rect key="frame" x="100" y="123.5" width="265" height="30"/>
+                                <state key="normal" title="Edit Profile">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gor-BN-Nht">
+                                <rect key="frame" x="128" y="79" width="224" height="36.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5cQ-GZ-7SA">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="36.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxD-bc-XAt">
+                                                <rect key="frame" x="0.0" y="0.0" width="41" height="20"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okn-Ug-7VI">
+                                                <rect key="frame" x="0.0" y="20" width="41" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="URB-RB-gjx">
+                                        <rect key="frame" x="71" y="0.0" width="62" height="36.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="600" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQt-1a-wUv">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="20"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38t-u3-l2l">
+                                                <rect key="frame" x="0.0" y="20" width="62" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GzB-hZ-Ui6">
+                                        <rect key="frame" x="163" y="0.0" width="61" height="36.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="655" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQO-FR-OtA">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="20"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="following" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAr-4u-09X">
+                                                <rect key="frame" x="0.0" y="20" width="61" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5cQ-GZ-7SA" firstAttribute="leading" secondItem="gor-BN-Nht" secondAttribute="leading" id="4Aw-XH-1ea"/>
+                                    <constraint firstItem="URB-RB-gjx" firstAttribute="leading" secondItem="gor-BN-Nht" secondAttribute="leading" constant="71" id="ETQ-Ax-7IW"/>
+                                    <constraint firstItem="GzB-hZ-Ui6" firstAttribute="leading" secondItem="gor-BN-Nht" secondAttribute="leading" constant="163" id="p3P-a8-3bc"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uae-Io-vKN">
+                                <rect key="frame" x="0.0" y="178" width="375" height="440"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="GqQ-ue-3H5">
+                                    <size key="itemSize" width="119" height="116"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="ProfilePostCell" id="6bt-hz-zNY" customClass="ProfilePostCell" customModule="Instagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="116"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="116"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-Vh-JsS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="119" height="116"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="postImageView" destination="Ibh-Vh-JsS" id="yfD-Ck-E0r"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gor-BN-Nht" firstAttribute="leading" secondItem="gbL-Da-koc" secondAttribute="trailing" constant="38" id="2dd-Am-pk3"/>
+                            <constraint firstItem="Pv9-J5-ii5" firstAttribute="bottom" secondItem="gbL-Da-koc" secondAttribute="bottom" id="GrQ-es-MHP"/>
+                            <constraint firstItem="gor-BN-Nht" firstAttribute="top" secondItem="SwY-cE-wUL" secondAttribute="top" constant="15" id="NCc-wP-gH0"/>
+                            <constraint firstItem="Pv9-J5-ii5" firstAttribute="top" secondItem="gor-BN-Nht" secondAttribute="bottom" constant="8" id="O0n-s8-WIj"/>
+                            <constraint firstItem="gbL-Da-koc" firstAttribute="top" secondItem="SwY-cE-wUL" secondAttribute="top" constant="10" id="PAn-gf-ieG"/>
+                            <constraint firstItem="uae-Io-vKN" firstAttribute="trailing" secondItem="SwY-cE-wUL" secondAttribute="trailing" id="SpL-lu-TMK"/>
+                            <constraint firstItem="Pv9-J5-ii5" firstAttribute="leading" secondItem="gbL-Da-koc" secondAttribute="trailing" constant="10" id="aVF-kf-Iog"/>
+                            <constraint firstItem="uae-Io-vKN" firstAttribute="leading" secondItem="SwY-cE-wUL" secondAttribute="leading" id="acZ-IV-cbT"/>
+                            <constraint firstItem="gbL-Da-koc" firstAttribute="leading" secondItem="SwY-cE-wUL" secondAttribute="leading" constant="10" id="fVK-hQ-xrl"/>
+                            <constraint firstItem="uae-Io-vKN" firstAttribute="bottom" secondItem="SwY-cE-wUL" secondAttribute="bottom" id="gez-Qv-3os"/>
+                            <constraint firstItem="SwY-cE-wUL" firstAttribute="trailing" secondItem="gor-BN-Nht" secondAttribute="trailing" constant="23" id="ljS-Nx-N9R"/>
+                            <constraint firstItem="uae-Io-vKN" firstAttribute="top" secondItem="gbL-Da-koc" secondAttribute="bottom" constant="24" id="xGP-1P-fpd"/>
+                            <constraint firstItem="SwY-cE-wUL" firstAttribute="trailing" secondItem="Pv9-J5-ii5" secondAttribute="trailing" constant="10" id="yBf-hR-hoE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SwY-cE-wUL"/>
                     </view>
                     <navigationItem key="navigationItem" id="GJR-69-n4z"/>
                     <connections>
+                        <outlet property="collectionView" destination="uae-Io-vKN" id="WNc-4V-HbV"/>
+                        <outlet property="profilePictureImageView" destination="gbL-Da-koc" id="V61-hj-ixg"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="logoutSegue" id="JvN-zx-RSq"/>
                     </connections>
                 </viewController>

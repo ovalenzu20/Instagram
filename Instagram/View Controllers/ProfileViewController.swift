@@ -8,14 +8,23 @@
 
 import UIKit
 import Parse
+import ParseUI
 
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UICollectionViewDataSource {
 
+    @IBOutlet weak var profilePictureImageView: PFImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.dataSource = self
         
+        setupNavBar()
         setupViews()
+        setupCollectionViewLayout()
+        //fetchUserPosts
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,7 +33,30 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
   
-    func setupViews(){
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfilePostCell", for: indexPath) as! ProfilePostCell
+        
+        
+        
+        return cell
+    }
+    
+    func setupCollectionViewLayout(){
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let cellsPerLine : CGFloat = 3
+        let interItemTotalSpacing = layout.minimumInteritemSpacing * (cellsPerLine - 1)
+        let width = collectionView.frame.width / cellsPerLine - interItemTotalSpacing / cellsPerLine
+        let height = width
+        
+        layout.itemSize = CGSize(width: width, height: height)
+        
+    }
+    
+    func setupNavBar(){
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         let instagramTitle = UILabel()
         instagramTitle.text = "Instagram"
@@ -34,6 +66,16 @@ class ProfileViewController: UIViewController {
         let newFont = UIFont(name: "Roboto", size: 17)
         logoutBarButton.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), NSAttributedStringKey.font: newFont], for: .normal)
         self.navigationItem.rightBarButtonItem = logoutBarButton
+    }
+    
+    func setupViews(){
+        profilePictureImageView.layer.borderWidth = 1.0
+        profilePictureImageView.layer.masksToBounds = false
+        profilePictureImageView.layer.borderColor = UIColor.white.cgColor
+        profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.size.height/2
+        profilePictureImageView.clipsToBounds = true
+        
+        
     }
     
     @IBAction func onLogout(_ sender: Any) {

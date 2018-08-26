@@ -33,6 +33,7 @@
 		787315C0212A7222003D5529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787315BE212A7222003D5529 /* Main.storyboard */; };
 		787315C2212A7222003D5529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787315C1212A7222003D5529 /* Assets.xcassets */; };
 		787315C5212A7222003D5529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787315C3212A7222003D5529 /* LaunchScreen.storyboard */; };
+		787A39A621336EFD00C06B34 /* ProfilePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787A39A521336EFD00C06B34 /* ProfilePostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		787315C1212A7222003D5529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		787315C4212A7222003D5529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		787315C6212A7222003D5529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/omarvalenzuela/Developer/Instagram/Instagram/Resources/Info.plist; sourceTree = "<absolute>"; };
+		787A39A521336EFD00C06B34 /* ProfilePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostCell.swift; sourceTree = "<group>"; };
 		979B4D74C8C0A6E7CA16DB16 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		AA362B2F35CF6A035267BCFC /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 			children = (
 				78628BBB212CE7090018D7EF /* CustomButton.swift */,
 				782F9136212F73020054DAF4 /* PostCell.swift */,
+				787A39A521336EFD00C06B34 /* ProfilePostCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				78628B91212CD6930018D7EF /* Post.swift in Sources */,
 				78628BBA212CE4F40018D7EF /* RegisterViewController.swift in Sources */,
 				78177C8A212B55A6004FA3A3 /* LoginViewController.swift in Sources */,
+				787A39A621336EFD00C06B34 /* ProfilePostCell.swift in Sources */,
 				78628BC4212E111B0018D7EF /* PreparePostViewController.swift in Sources */,
 				78628BBC212CE7090018D7EF /* CustomButton.swift in Sources */,
 				787315BB212A7222003D5529 /* AppDelegate.swift in Sources */,
