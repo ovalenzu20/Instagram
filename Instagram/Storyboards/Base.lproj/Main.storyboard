@@ -274,43 +274,54 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="529" id="nxb-2C-ySI" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="529" id="nxb-2C-ySI" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="529"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nxb-2C-ySI" id="ebp-EH-K7x">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="528.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="lje-nd-59z">
-                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="lje-nd-59z" customClass="PFImageView">
+                                                    <rect key="frame" x="8" y="13" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="AZZ-6x-E4J"/>
-                                                        <constraint firstAttribute="width" constant="50" id="e2h-s4-URv"/>
+                                                        <constraint firstAttribute="height" constant="40" id="AZZ-6x-E4J"/>
+                                                        <constraint firstAttribute="width" constant="40" id="e2h-s4-URv"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jd-UZ-EB4">
-                                                    <rect key="frame" x="66" y="23" width="76" height="20"/>
+                                                    <rect key="frame" x="58" y="23" width="76" height="20"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="6G1-VC-T7d">
-                                                    <rect key="frame" x="0.0" y="69" width="375" height="350"/>
+                                                    <rect key="frame" x="0.0" y="61" width="375" height="350"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="375" id="0jY-Ok-UVU"/>
                                                         <constraint firstAttribute="height" constant="350" id="rYt-OP-OD5"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iwY-pn-hhN">
-                                                    <rect key="frame" x="8" y="425" width="359" height="43"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iwY-pn-hhN">
+                                                    <rect key="frame" x="8" y="419" width="359" height="43"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="378 likes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcf-G7-H1i">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="378 likes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcf-G7-H1i">
                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
                                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmG-LH-eYy">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmG-LH-eYy">
                                                             <rect key="frame" x="0.0" y="23" width="359" height="20"/>
                                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -318,8 +329,8 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Check out my Instagram Clone project! Thank you for the help CodePath" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dl3-Lr-5WQ">
-                                                    <rect key="frame" x="8" y="478" width="359" height="40"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check out my Instagram Clone project! Thank you for the help CodePath" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dl3-Lr-5WQ">
+                                                    <rect key="frame" x="8" y="470" width="359" height="40"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -340,15 +351,15 @@
                                                 <constraint firstAttribute="trailing" secondItem="6G1-VC-T7d" secondAttribute="trailing" id="OT9-tJ-wpb"/>
                                                 <constraint firstItem="K7t-7a-KIs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0jd-UZ-EB4" secondAttribute="trailing" constant="8" id="TCt-XB-Cvw"/>
                                                 <constraint firstItem="iwY-pn-hhN" firstAttribute="leading" secondItem="ebp-EH-K7x" secondAttribute="leading" constant="8" id="aDy-nG-qXc"/>
-                                                <constraint firstItem="iwY-pn-hhN" firstAttribute="top" secondItem="6G1-VC-T7d" secondAttribute="bottom" constant="6" id="bvc-ZM-kmb"/>
+                                                <constraint firstItem="iwY-pn-hhN" firstAttribute="top" secondItem="6G1-VC-T7d" secondAttribute="bottom" constant="8" id="bvc-ZM-kmb"/>
                                                 <constraint firstItem="0jd-UZ-EB4" firstAttribute="top" secondItem="ebp-EH-K7x" secondAttribute="topMargin" constant="12" id="cGA-Qy-qAE"/>
-                                                <constraint firstItem="lje-nd-59z" firstAttribute="top" secondItem="ebp-EH-K7x" secondAttribute="top" constant="8" id="cc4-85-gQd"/>
+                                                <constraint firstItem="lje-nd-59z" firstAttribute="top" secondItem="ebp-EH-K7x" secondAttribute="top" constant="13" id="cc4-85-gQd"/>
                                                 <constraint firstAttribute="trailing" secondItem="K7t-7a-KIs" secondAttribute="trailing" constant="8" id="qRT-G9-cTP"/>
                                                 <constraint firstItem="6G1-VC-T7d" firstAttribute="leading" secondItem="ebp-EH-K7x" secondAttribute="leading" id="qSf-cR-m6i"/>
                                                 <constraint firstAttribute="trailing" secondItem="iwY-pn-hhN" secondAttribute="trailing" constant="8" id="uJV-FR-0om"/>
-                                                <constraint firstAttribute="bottom" secondItem="dl3-Lr-5WQ" secondAttribute="bottom" constant="10.5" id="uTF-He-BvX"/>
-                                                <constraint firstItem="6G1-VC-T7d" firstAttribute="top" secondItem="lje-nd-59z" secondAttribute="bottom" constant="11" id="uuh-FG-dXc"/>
-                                                <constraint firstItem="0jd-UZ-EB4" firstAttribute="leading" secondItem="lje-nd-59z" secondAttribute="trailing" constant="8" id="wlB-gT-4vx"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dl3-Lr-5WQ" secondAttribute="bottom" constant="10.5" id="uTF-He-BvX"/>
+                                                <constraint firstItem="6G1-VC-T7d" firstAttribute="top" secondItem="lje-nd-59z" secondAttribute="bottom" constant="8" id="uuh-FG-dXc"/>
+                                                <constraint firstItem="0jd-UZ-EB4" firstAttribute="leading" secondItem="lje-nd-59z" secondAttribute="trailing" constant="10" id="wlB-gT-4vx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -502,13 +513,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-hq-mzM">
-                                <rect key="frame" x="71" y="553" width="232" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxK-p7-XuS">
+                                <rect key="frame" x="16" y="569" width="343" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
-                                    <action selector="onLogout:" destination="bLh-T2-itc" eventType="touchUpInside" id="pfc-yI-Vg7"/>
+                                    <action selector="onLogout:" destination="bLh-T2-itc" eventType="touchUpInside" id="6yj-R1-RAA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -522,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEY-cn-mcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649" y="2404"/>
+            <point key="canvasLocation" x="648.79999999999995" y="2403.1484257871066"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dFO-1K-zzJ">
@@ -610,7 +621,7 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iSF-Fo-Awt"/>
+        <segue reference="waS-SN-Lnp"/>
         <segue reference="JvN-zx-RSq"/>
         <segue reference="PpD-b6-tHR"/>
     </inferredMetricsTieBreakers>

@@ -44,6 +44,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
                     DispatchQueue.main.async {
                         let image = UIImage(data: data!)
                         cell.postImageView.image = image
+                        cell.postImageView.contentMode = .scaleAspectFill
                     }
                 } else{
                     print(error!.localizedDescription)
