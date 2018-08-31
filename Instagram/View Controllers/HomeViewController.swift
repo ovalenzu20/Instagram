@@ -84,6 +84,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         let query = Post.query()
         query?.order(byDescending: "createdAt")
         query?.includeKey("author")
+//        query?.whereKey("author", equalTo: PFUser.current()?.username)
         query?.limit = 20
         
         // fetch data asynchronously

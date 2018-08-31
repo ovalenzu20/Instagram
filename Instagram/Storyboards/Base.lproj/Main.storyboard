@@ -442,7 +442,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPs-0Z-cIL">
-                                <rect key="frame" x="17" y="451" width="343" height="100"/>
+                                <rect key="frame" x="17" y="451" width="343" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -745,7 +745,7 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="waS-SN-Lnp"/>
+        <segue reference="1D4-cH-HdC"/>
         <segue reference="JvN-zx-RSq"/>
         <segue reference="PpD-b6-tHR"/>
     </inferredMetricsTieBreakers>

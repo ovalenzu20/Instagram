@@ -57,5 +57,29 @@ class Post: PFObject, PFSubclassing {
         }
         return nil
     }
+    
+//    class func fetchPosts(offset: Int = 0, limit: Int = 20, authorConstraint: PFUser? = nil, completion: PFQueryArrayResultBlock) -> [Post]? {
+//        let query = PFQuery(className: "Post");
+//        query.limit = limit;
+//        query.skip = offset;
+//        query.order(byDescending: "createdAt");
+//        query.includeKey("author");
+//
+//        if (authorConstraint != nil) {
+//            query.whereKey("author", equalTo: authorConstraint!);
+//        }
+//
+//        var results: [PFObject]
+//
+//        do {
+//            results = try query.findObjects();
+//        } catch(_) {
+//
+//        }
+//
+//        completion(results, nil);
+//
+//        return results as! [Post]?;
+//    }
 }
 

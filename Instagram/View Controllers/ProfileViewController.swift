@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var profilePictureImageView: PFImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -23,8 +25,6 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource {
         setupNavBar()
         setupViews()
         setupCollectionViewLayout()
-        //fetchUserPosts
-        
         // Do any additional setup after loading the view.
     }
 
@@ -39,9 +39,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfilePostCell", for: indexPath) as! ProfilePostCell
-        
-        
-        
+
         return cell
     }
     
